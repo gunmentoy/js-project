@@ -1,10 +1,18 @@
-// determine number of betting lines
-// collecting a bet amount
-// spin the slot machine
-// check if user won or lost
-// award the user if won, take bet if lost
-// play again or quit
-
+/**
+ * This script simulates a slot machine game. It prompts the user to deposit an amount of money, 
+ * then asks how many lines they would like to bet on and how much they would like to bet per line. 
+ * The slot machine then spins and displays the results. If the user wins, their winnings are added 
+ * to their balance, and they are prompted to play again. If the user loses all their money, the game ends.
+ * 
+ * @file This file contains the code for the slot machine game.
+ * @summary This script simulates a slot machine game.
+ * @description This script contains functions for depositing money, determining the number of lines to bet on, 
+ * collecting a bet amount, spinning the slot machine, transposing the reels into a row, printing the results, 
+ * determining if the user won or lost, and the main function that runs the game.
+ * @requires prompt-sync
+ * @version 1.0.0
+ * @since 2021-09-01
+ */
 const prompt = require("prompt-sync")();
 
 const ROWS = 3;
@@ -139,6 +147,11 @@ const getWinnings = (rows, bet, lines) => {
 };
 
 // main function
+/**
+ * The game function is the main function that runs the game. It initializes the balance, 
+ * and loops through the game until the player loses all their money or chooses to stop playing.
+ * @returns {void}
+ */
 const game = () => {
   let balance = deposit();
 
